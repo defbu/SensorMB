@@ -11,6 +11,19 @@ namespace sensormb {
         INCH = 25400
     }
 
+    /**
+     * Measures the distance and returns the result in a range from 1 to 300 centimeters or up to 118 inch. The maximum value is returned to indicate when no object was detected.
+     * @param unit unit of distance, eg: makerbit.DistanceUnit.CM
+     * @param trig pin connected to trig, eg: makerbit.Pin.P5
+     * @param echo Pin connected to echo, eg: makerbit.Pin.P8
+     */
+    //% subcategory="Ultrasonic"
+    //% blockId="sensormb_ultrasonic_distance" block="ultrasonic distance in %unit | trig %trig | echo %echo"
+    //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
+    //% trig.fieldOptions.tooltips="false"
+    //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
+    //% echo.fieldOptions.tooltips="false"
+    //% weight=45
     export function getUltraSonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {
         const trigPinNumber: number = trig
         const echoPinNumber: number = echo

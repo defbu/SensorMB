@@ -25,7 +25,6 @@ namespace SensorMB {
     //% echo.fieldOptions.tooltips="false"
     //% weight=45
     export function getUltrasonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {
-        /*
         const trigPinNumber: number = trig
         const echoPinNumber: number = echo
 
@@ -52,7 +51,5 @@ namespace SensorMB {
         }
 
         return Math.idiv(objectDistance, unit)
-        */
-        return 10
     }
 }

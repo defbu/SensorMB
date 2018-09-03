@@ -2,4 +2,4 @@
  * Ultrasonic tests
  */
 
-const distance: number = sensormb.getUltrasonicDistance(sensormb.DistanceUnit.CM, sensormb.Pin.P0, sensormb.Pin.P1)
+const distance: number = SensorMB.getUltrasonicDistance(SensorMB.DistanceUnit.CM, SensorMB.Pin.P0, SensorMB.Pin.P1)

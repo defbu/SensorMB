@@ -24,9 +24,9 @@ namespace SensorMB {
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
     //% echo.fieldOptions.tooltips="false"
     //% weight=45
-    export function getUltrasonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {
-        /*
+    export function getUltrasonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {        
         const trigPinNumber: number = trig
+        /*
         const echoPinNumber: number = echo        
         const MAX_DIST_MICROMETER = 3000 * 1000
         const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20°C

@@ -1,16 +1,6 @@
 // SensorMB blocks supporting HC-SR04 ultrasonic distance sensor
-
-namespace SensorMB {
-
-    export const enum DistanceUnit {
-        //% block="cm"
-        CM = 10000,
-        //% block="mm"
-        MM = 100000,
-        //% block="inch"
-        INCH = 25400
-    }
-
+var SensorMB;
+(function (SensorMB) {
     /**
      * Measures the distance and returns the result in a range from 1 to 300 centimeters or up to 118 inch. The maximum value is returned to indicate when no object was detected.
      * @param unit unit of distance, eg: makerbit.DistanceUnit.CM
@@ -24,13 +14,13 @@ namespace SensorMB {
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
     //% echo.fieldOptions.tooltips="false"
     //% weight=45
-    export function getUltrasonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {
+    function getUltrasonicDistance(unit, trig, echo) {
         /*
         const trigPinNumber: number = trig
         const echoPinNumber: number = echo
 
         const MAX_DIST_MICROMETER = 3000 * 1000
-        const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20°C
+        const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20Â°C
         const MAX_PULSE_DURATION_US = Math.idiv(2 * MAX_DIST_MICROMETER, VELOCITY_OF_SOUND)
 
         //Pulse
@@ -53,6 +43,8 @@ namespace SensorMB {
 
         return Math.idiv(objectDistance, unit)
         */
-        return 10
+        return 10;
     }
-}
+    SensorMB.getUltrasonicDistance = getUltrasonicDistance;
+})(SensorMB || (SensorMB = {}));
+//# sourceMappingURL=ultrasonic.js.map

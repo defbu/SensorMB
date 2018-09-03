@@ -5,7 +5,7 @@ namespace sensormb {
     export const enum DistanceUnit {
         //% block="cm"
         CM = 10000,
-        //% block= "mm"
+        //% block="mm"
         MM = 100000,
         //% block="inch"
         INCH = 25400
@@ -25,6 +25,7 @@ namespace sensormb {
     //% echo.fieldOptions.tooltips="false"
     //% weight=45
     export function getUltrasonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {
+        /*
         const trigPinNumber: number = trig
         const echoPinNumber: number = echo
 
@@ -51,5 +52,7 @@ namespace sensormb {
         }
 
         return Math.idiv(objectDistance, unit)
+        */
+        return 10
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "SensorMB",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "SensorMB",
     "license": "MIT",
     "dependencies": {

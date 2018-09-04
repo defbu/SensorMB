@@ -40,7 +40,7 @@ namespace defbu {
         control.waitMicros(10)
         pins.digitalWrite(trigPinNumber, 0)
         control.waitMicros(0)
-        /*
+
         //Receive echo
         const pulseDuration = pins.pulseIn(echoPinNumber, PulseValue.Hight, MAX_PULSE_DURATION_US)
         let objectDistance = Math.idiv(pulseDuration * VELOCITY_OF_SOUND, 2)
@@ -51,7 +51,5 @@ namespace defbu {
         }
 
         return Math.idiv(objectDistance, unit)
-        */
-        return 15;
     }
 }

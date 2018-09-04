@@ -30,7 +30,7 @@ namespace defbu {
         //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
         //% echo.fieldOptions.tooltips="false"
         //% weight=45
-        getDistance(unit: DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {        
+        getDistance(unit: defbu.DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {        
             const trigPinNumber: number = trig        
             const echoPinNumber: number = echo
             

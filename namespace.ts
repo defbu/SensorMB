@@ -1,5 +1,5 @@
 /**
- * SensorMB
+ * DEFBU Blocks
  */
 //% color=#ff4500 icon="\u272a" block="DEFBU Blocks"
 namespace defbu {

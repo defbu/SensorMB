@@ -34,11 +34,11 @@ namespace defbu {
 
         //Pulse
         pins.setPull(trigPinNumber, PinPullMode.PullNone)
-        pins.digitalWrite(trigPinNumber, 0)
+        pins.digitalWritePin(trigPinNumber, 0)
         control.waitMicros(2)
-        pins.digitalWrite(trigPinNumber, 1)
+        pins.digitalWritePin(trigPinNumber, 1)
         control.waitMicros(10)
-        pins.digitalWrite(trigPinNumber, 0)
+        pins.digitalWritePin(trigPinNumber, 0)
         control.waitMicros(0)
 
         //Receive echo
@@ -46,11 +46,9 @@ namespace defbu {
         let objectDistance = Math.idiv(pulseDuration * VELOCITY_OF_SOUND, 2)
 
         // Map timeouts to max distance and clip at max distance
-        //if (objectDistance === 0 || objectDistance > MAX_DIST_MICROMETER) {
-            //objectDistance = MAX_DIST_MICROMETER
-        //}
-        return 16
-
-        //return Math.idiv(objectDistance, unit)
+        if (objectDistance === 0 || objectDistance > MAX_DIST_MICROMETER) {
+            objectDistance = MAX_DIST_MICROMETER
+        }
+        return Math.idiv(objectDistance, unit)
     }
 }

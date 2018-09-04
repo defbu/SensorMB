@@ -12,13 +12,13 @@ namespace defbu {
     }
 
     /**
-     * Measures the distance and returns the result in a range from 1 to 300 centimeters or up to 118 inch. The maximum value is returned to indicate when no object was detected.
-     * @param unit unit of distance, eg: makerbit.DistanceUnit.CM
-     * @param trig pin connected to trig, eg: makerbit.Pin.P5
-     * @param echo Pin connected to echo, eg: makerbit.Pin.P8
+     * Measures the distance: range 0 - 300 cm
+     * @param unit unit of distance
+     * @param trig pin connected to trig
+     * @param echo Pin connected to echo
      */
-    //% subcategory="Ultrasonic"
-    //% blockId="sensormb_ultrasonic_distance" block="ultrasonic distance in %unit | trig %trig | echo %echo"
+    //% subcategory="HC-SR04"
+    //% blockId="defbublocks_hc-sr04_distance" block="distance in %unit | trig %trig | echo %echo"
     //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% trig.fieldOptions.tooltips="false"
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3

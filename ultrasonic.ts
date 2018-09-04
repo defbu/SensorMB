@@ -1,15 +1,19 @@
 // DEFBU blocks supporting HC-SR04 ultrasonic distance sensor
 
-namespace defbu {
+enum DistanceUnit {
+    //% block="cm"
+    CM = 10000,
+    //% block="mm"
+    MM = 1000,
+    //% block="inch"
+    INCH = 25400
+}
 
-    export const enum DistanceUnit {
-        //% block="cm"
-        CM = 10000,
-        //% block="mm"
-        MM = 1000,
-        //% block="inch"
-        INCH = 25400
-    }
+/**
+ * DEFBU Blocks
+ */
+//% color=#ff4500 icon="\u272a" block="DEFBU Blocks"
+namespace defbu {    
 
     /**
      * Measures the distance: range 0 - 300 cm
@@ -18,13 +22,13 @@ namespace defbu {
      * @param echo Pin connected to echo
      */
     //% subcategory="HC-SR04"
-    //% blockId="defbublocks_hc-sr04_distance" block="distance in %unit | trig %trig | echo %echo"
+    //% blockId="defbu_get_distance" block="distance in %unit=DistanceUnit.CM | trig %trig=DigitalPin.P0 | echo %echo=DigitalPin.P1"
     //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% trig.fieldOptions.tooltips="false"
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
     //% echo.fieldOptions.tooltips="false"
     //% weight=45
-    export function getDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {        
+    export function getDistance(unit: DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {        
         const trigPinNumber: number = trig        
         const echoPinNumber: number = echo
         

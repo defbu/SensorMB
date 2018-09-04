@@ -2,7 +2,7 @@
  * SensorMB
  */
 //% color=#ff4500 icon="\u272a" block="SensorMB"
-namespace SensorMB {
+namespace defbu {
     export const enum Pin {
         P0 = DigitalPin.P0,
         P1 = DigitalPin.P1,

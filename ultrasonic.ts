@@ -1,6 +1,6 @@
-// SensorMB blocks supporting HC-SR04 ultrasonic distance sensor
+// DEFBU blocks supporting HC-SR04 ultrasonic distance sensor
 
-namespace SensorMB {
+namespace defbu {
 
     export const enum DistanceUnit {
         //% block="cm"

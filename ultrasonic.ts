@@ -27,11 +27,11 @@ namespace defbu {
     export function getUltrasonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {        
         const trigPinNumber: number = trig        
         const echoPinNumber: number = echo
-        /*        
+        
         const MAX_DIST_MICROMETER = 3000 * 1000
-        const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20�C
+        const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20 C
         const MAX_PULSE_DURATION_US = Math.idiv(2 * MAX_DIST_MICROMETER, VELOCITY_OF_SOUND)
-
+        /*
         //Pulse
         pins.setPull(trigPinNumber, PinPullMode.PullNone)
         pins.digitalWrite(trigPinNumber, 0)
@@ -52,6 +52,6 @@ namespace defbu {
 
         return Math.idiv(objectDistance, unit)
         */
-        return 14;
+        return 15;
     }
 }

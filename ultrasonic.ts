@@ -6,7 +6,7 @@ namespace defbu {
         //% block="cm"
         CM = 10000,
         //% block="mm"
-        MM = 100000,
+        MM = 1000,
         //% block="inch"
         INCH = 25400
     }

@@ -1,19 +1,21 @@
 // DEFBU blocks supporting HC-SR04 ultrasonic distance sensor
 
-enum DistanceUnit {
-    //% block="cm"
-    CM = 10000,
-    //% block="mm"
-    MM = 1000,
-    //% block="inch"
-    INCH = 25400
-}
+
 
 /**
  * DEFBU Blocks
  */
 //% color=#ff4500 icon="\u272a" block="DEFBU Blocks"
-namespace defbu {    
+namespace defbu { 
+    
+    enum DistanceUnit {
+        //% block="cm"
+        CM = 10000,
+        //% block="mm"
+        MM = 1000,
+        //% block="inch"
+        INCH = 25400
+    }
 
     /**
      * Measures the distance: range 0 - 300 cm
@@ -22,7 +24,7 @@ namespace defbu {
      * @param echo Pin connected to echo
      */
     //% subcategory="HC-SR04"
-    //% blockId="defbu_get_distance" block="distance in %unit=DistanceUnit.CM | trig %trig=DigitalPin.P0 | echo %echo=DigitalPin.P1"
+    //% blockId="defbu_get_distance" block="distance in %unit=defbu.DistanceUnit.CM | trig %trig=DigitalPin.P0 | echo %echo=DigitalPin.P1"
     //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% trig.fieldOptions.tooltips="false"
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3

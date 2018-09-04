@@ -1,6 +1,6 @@
 {
-    "DistanceUnit.CM|block": "cm",
-    "DistanceUnit.MM|block": "mm",
-    "DistanceUnit.INCH|block": "inch",
-    "defbu.getDistance|block": "afstand in %unit=DistanceUnit.CM | trig %trig=DigitalPin.P0 | echo %echo=DigitalPin.P1",
+    "defbu.DistanceUnit.CM|block": "cm",
+    "defbu.DistanceUnit.MM|block": "mm",
+    "defbu.DistanceUnit.INCH|block": "inch",
+    "defbu.getDistance|block": "afstand in %unit=defbu.DistanceUnit.CM | trig %trig=DigitalPin.P0 | echo %echo=DigitalPin.P1"
 }

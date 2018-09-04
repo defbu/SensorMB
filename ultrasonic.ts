@@ -17,46 +17,49 @@ namespace defbu {
         INCH = 25400
     }
 
-    /**
-     * Measures the distance: range 0 - 300 cm
-     * @param unit unit of distance
-     * @param trig pin connected to trig
-     * @param echo Pin connected to echo
-     */
-    //% subcategory="HC-SR04"
-    //% blockId="defbu_get_distance" block="distance in %unit=defbu.DistanceUnit.CM | trig %trig=DigitalPin.P0 | echo %echo=DigitalPin.P1"
-    //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
-    //% trig.fieldOptions.tooltips="false"
-    //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
-    //% echo.fieldOptions.tooltips="false"
-    //% weight=45
-    export function getDistance(unit: DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {        
-        const trigPinNumber: number = trig        
-        const echoPinNumber: number = echo
-        
-        const MAX_DIST_MICROMETER = 3000 * 1000
-        const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20 C
-        const MAX_PULSE_DURATION_US = Math.idiv(2 * MAX_DIST_MICROMETER, VELOCITY_OF_SOUND)
-        const LEVEL_HIGH = 50
-        const LEVEL_LOW = 33
+    export class HCSR04 {
 
-        //Pulse
-        pins.setPull(trigPinNumber, PinPullMode.PullNone)
-        pins.digitalWritePin(trigPinNumber, 0)
-        control.waitMicros(2)
-        pins.digitalWritePin(trigPinNumber, 1)
-        control.waitMicros(10)
-        pins.digitalWritePin(trigPinNumber, 0)
-        control.waitMicros(0)
+        /**
+         * Measures the distance: range 0 - 300 cm
+         * @param unit unit of distance
+         * @param trig pin connected to trig
+         * @param echo Pin connected to echo
+         */
+        //% subcategory="HC-SR04"
+        //% blockId="defbu_get_distance" block="distance in %unit=defbu.DistanceUnit.CM | trig %trig=DigitalPin.P0 | echo %echo=DigitalPin.P1"
+        //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
+        //% trig.fieldOptions.tooltips="false"
+        //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
+        //% echo.fieldOptions.tooltips="false"
+        //% weight=45
+        getDistance(unit: DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {        
+            const trigPinNumber: number = trig        
+            const echoPinNumber: number = echo
+            
+            const MAX_DIST_MICROMETER = 3000 * 1000
+            const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20 C
+            const MAX_PULSE_DURATION_US = Math.idiv(2 * MAX_DIST_MICROMETER, VELOCITY_OF_SOUND)
+            const LEVEL_HIGH = 50
+            const LEVEL_LOW = 33
 
-        //Receive echo
-        const pulseDuration = pins.pulseIn(echoPinNumber, PulseValue.High, MAX_PULSE_DURATION_US)
-        let objectDistance = Math.idiv(pulseDuration * VELOCITY_OF_SOUND * LEVEL_HIGH, 2 * LEVEL_LOW)
+            //Pulse
+            pins.setPull(trigPinNumber, PinPullMode.PullNone)
+            pins.digitalWritePin(trigPinNumber, 0)
+            control.waitMicros(2)
+            pins.digitalWritePin(trigPinNumber, 1)
+            control.waitMicros(10)
+            pins.digitalWritePin(trigPinNumber, 0)
+            control.waitMicros(0)
 
-        // Map timeouts to max distance and clip at max distance
-        if (objectDistance === 0 || objectDistance > MAX_DIST_MICROMETER) {
-            objectDistance = MAX_DIST_MICROMETER
+            //Receive echo
+            const pulseDuration = pins.pulseIn(echoPinNumber, PulseValue.High, MAX_PULSE_DURATION_US)
+            let objectDistance = Math.idiv(pulseDuration * VELOCITY_OF_SOUND * LEVEL_HIGH, 2 * LEVEL_LOW)
+
+            // Map timeouts to max distance and clip at max distance
+            if (objectDistance === 0 || objectDistance > MAX_DIST_MICROMETER) {
+                objectDistance = MAX_DIST_MICROMETER
+            }
+            return Math.idiv(objectDistance, unit)
         }
-        return Math.idiv(objectDistance, unit)
     }
 }

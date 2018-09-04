@@ -1,8 +1,6 @@
 {
-    "defbu|block": "DEFBU Blokken",
     "defbu.DistanceUnit.CM|block": "cm",
     "defbu.DistanceUnit.MM|block": "mm",
     "defbu.DistanceUnit.INCH|block": "inch",
     "defbu.HCSR04.getDistance|block": "afstand in %unit | trig %trig | echo %echo",
-    "{id:subcategory}HC-SR04 distance": "HC-SR04 afstand"
 }

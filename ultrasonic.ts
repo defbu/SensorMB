@@ -42,8 +42,8 @@ namespace defbu {
         control.waitMicros(0)
 
         //Receive echo
-        //const pulseDuration = pins.pulseIn(echoPinNumber, PulseValue.High, MAX_PULSE_DURATION_US)
-        //let objectDistance = Math.idiv(pulseDuration * VELOCITY_OF_SOUND, 2)
+        const pulseDuration = pins.pulseIn(echoPinNumber, PulseValue.High, MAX_PULSE_DURATION_US)
+        let objectDistance = Math.idiv(pulseDuration * VELOCITY_OF_SOUND, 2)
 
         // Map timeouts to max distance and clip at max distance
         //if (objectDistance === 0 || objectDistance > MAX_DIST_MICROMETER) {

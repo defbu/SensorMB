@@ -1,7 +1,7 @@
 {
-    "name": "SensorMB",
+    "name": "DEFBU Blocks",
     "version": "0.0.5",
-    "description": "SensorMB",
+    "description": "DEFBU Blocks",
     "license": "MIT",
     "dependencies": {
         "core": "*"

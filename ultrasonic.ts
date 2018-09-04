@@ -24,7 +24,7 @@ namespace defbu {
          * @param echo Pin connected to echo, eg: DigitalPin.P1
          */
         //% subcategory="HC-SR04"
-        //% blockId="defbu_get_distance" block="distance in %unit=defbu.DistanceUnit | trig %trig=DigitalPin | echo %echo=DigitalPin"
+        //% blockId="defbu_get_distance" block="distance in %unit | trig %trig | echo %echo"
         //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
         //% trig.fieldOptions.tooltips="false"
         //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3

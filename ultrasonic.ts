@@ -31,8 +31,8 @@ namespace defbu {
         const MAX_DIST_MICROMETER = 3000 * 1000
         const VELOCITY_OF_SOUND = 343 // 343 m/s at sea level and 20 C
         const MAX_PULSE_DURATION_US = Math.idiv(2 * MAX_DIST_MICROMETER, VELOCITY_OF_SOUND)
-        const LEVEL_HIGH = 5
-        const LEVEL_LOW = 3.3
+        const LEVEL_HIGH = 50
+        const LEVEL_LOW = 33
 
         //Pulse
         pins.setPull(trigPinNumber, PinPullMode.PullNone)

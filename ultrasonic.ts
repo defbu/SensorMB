@@ -24,7 +24,7 @@ namespace defbu {
     //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
     //% echo.fieldOptions.tooltips="false"
     //% weight=45
-    export function getUltrasonicDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {        
+    export function getDistance(unit: DistanceUnit, trig: Pin, echo: Pin): number {        
         const trigPinNumber: number = trig        
         const echoPinNumber: number = echo
         

@@ -23,14 +23,13 @@ namespace defbu {
          * @param trig pin connected to trig, eg: DigitalPin.P0
          * @param echo Pin connected to echo, eg: DigitalPin.P1
          */
-        //% subcategory="HC-SR04 distance"
         //% blockId="defbu_get_distance" block="distance in %unit | trig %trig | echo %echo"
         //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
         //% trig.fieldOptions.tooltips="false"
         //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
         //% echo.fieldOptions.tooltips="false"
         //% weight=45
-        getDistance(unit: defbu.DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {        
+        getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number {
             const trigPinNumber: number = trig        
             const echoPinNumber: number = echo
             

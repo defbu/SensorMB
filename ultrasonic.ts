@@ -12,7 +12,7 @@ namespace defbu {
     }
 
         /**
-         * Measures the distance: range 0 - 300 cm
+         * Measures the distance with HC-SR04: range 0 - 300 cm
          * @param unit unit of distance, eg: defbu.DistanceUnit.CM
          * @param trig pin connected to trig, eg: DigitalPin.P0
          * @param echo Pin connected to echo, eg: DigitalPin.P1

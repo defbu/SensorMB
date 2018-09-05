@@ -5,5 +5,5 @@
   "defbu.getDistance|block": "afstand in %unit | trig %trig | echo %echo",
   "defbu|block": "DEFBU-blokken",
   "{id:category}Defbu": "Defbu",
-  "{id:subcategory}Distance": "Afstand"
+  "{id:group}Distance": "Afstand"
 }

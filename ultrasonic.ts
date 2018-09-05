@@ -1,4 +1,5 @@
 //% color=#ff4500 icon="\uf2db" block="DEFBU blocks"
+//% groups=['Distance']
 namespace defbu {
 
     export const enum DistanceUnit {
@@ -16,12 +17,12 @@ namespace defbu {
          * @param trig pin connected to trig, eg: DigitalPin.P0
          * @param echo Pin connected to echo, eg: DigitalPin.P1
          */
-        //% subcategory="Distance"
         //% blockId="defbu_get_distance" block="distance in %unit | trig %trig | echo %echo"
         //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
         //% trig.fieldOptions.tooltips="false"
         //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
         //% echo.fieldOptions.tooltips="false"
+        //% group="Distance"
         //% weight=45
         export function getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number {
             const trigPinNumber: number = trig        

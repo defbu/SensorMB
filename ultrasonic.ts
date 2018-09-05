@@ -1,6 +1,3 @@
-/**
- * DEFBU blocks supporting HC-SR04 ultrasonic distance sensor
- */
 //% color=#ff4500 icon="\u272a" block="DEFBU Blocks"
 namespace defbu {
 

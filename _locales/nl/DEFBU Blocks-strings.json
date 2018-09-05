@@ -3,7 +3,7 @@
   "defbu.DistanceUnit.INCH|block": "inch",
   "defbu.DistanceUnit.MM|block": "mm",
   "defbu.getDistance|block": "afstand in %unit | trig %trig | echo %echo",
-  "defbu|block": "DEFBU Blokken",
+  "defbu|block": "DEFBU-blokken",
   "{id:category}Defbu": "Defbu",
-  "{subcategory}Distance": "Afstand"
+  "{id:subcategory}Distance": "Afstand"
 }

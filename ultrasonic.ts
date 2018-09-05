@@ -1,4 +1,4 @@
-//% color=#ff4500 icon="\uf2db" block="DEFBU Blocks"
+//% color=#ff4500 icon="\uf2db" block="DEFBU blocks"
 namespace defbu {
 
     export const enum DistanceUnit {

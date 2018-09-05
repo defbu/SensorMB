@@ -1,0 +1,8 @@
+{
+  "defbu": "DEFBU blokken ondersteuning voor HC-SR04 ultrasonic afstandssensor",
+  "defbu.getDistance": "Meten van afstand: bereik 0 - 300 cm",
+  "defbu.getDistance|param|echo": "Pin verbonden met echo, eg: DigitalPin.P1",
+  "defbu.getDistance|param|trig": "Pin verbonden met trig, eg: DigitalPin.P0",
+  "defbu.getDistance|param|unit": "afstandseenheid, eg: defbu.DistanceUnit.CM",
+  "distance": "Afstandtests"
+}

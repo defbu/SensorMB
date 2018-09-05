@@ -1,0 +1,8 @@
+{
+  "defbu.DistanceUnit.CM|block": "cm",
+  "defbu.DistanceUnit.INCH|block": "inch",
+  "defbu.DistanceUnit.MM|block": "mm",
+  "defbu.getDistance|block": "afstand in %unit | trig %trig | echo %echo",
+  "defbu|block": "DEFBU Blokken",
+  "{id:category}Defbu": "Defbu"
+}

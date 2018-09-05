@@ -5,19 +5,19 @@ This library provides support for the different DEFBU Blocks, see https://www.de
 ## Distance HC-SR04
 Reads distance in ``mm``, ``cm`` or ``inch``.
 
-###Distance Units
+### Distance Units
 
 ``DistanceUnit.CM`` is cm
 ``DistanceUnit.MM`` is mm
 ``DistanceUnit.INCH`` is inch
 
-###Functions
+### Functions
 
 ``getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number``
 
-###Example
+### Example
 
-```blocks
+```typescript
 let distance = defbu.getDistance(defbu.DistanceUnit.CM, DigitalPin.P0, DigitalPin.P1)
 ```
 

@@ -13,7 +13,9 @@ Reads distance in ``mm``, ``cm`` or ``inch``.
 
 ### Functions
 
-``getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number``
+```typescript
+getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number
+```
 
 ### Example
 

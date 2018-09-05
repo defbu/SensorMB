@@ -9,7 +9,6 @@
     "files": [
         "README.md",
         "ultrasonic.ts",
-        "_locales/nl/defbu-jsdoc-strings.json",
         "_locales/nl/defbu-strings.json"
     ],
     "testFiles": [

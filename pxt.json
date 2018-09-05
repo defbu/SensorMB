@@ -8,9 +8,7 @@
     },
     "files": [
         "README.md",
-        "ultrasonic.ts",
-        "_locales/nl/DEFBU Blocks-jsdoc-strings.json",
-        "_locales/nl/DEFBU Blocks-strings.json"
+        "ultrasonic.ts"
     ],
     "testFiles": [
         "test.ts"

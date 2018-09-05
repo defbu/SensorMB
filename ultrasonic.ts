@@ -29,7 +29,7 @@ namespace defbu {
     //% echo.fieldOptions.tooltips="false"
     //% weight=45
     //% parts="defbu"
-    getDistance(unit: defbu.DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {
+    export function getDistance(unit: defbu.DistanceUnit, trig: DigitalPin, echo: DigitalPin): number {
         const trigPinNumber: number = trig        
         const echoPinNumber: number = echo
         

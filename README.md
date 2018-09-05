@@ -8,7 +8,9 @@ Reads distance in ``mm``, ``cm`` or ``inch``.
 ### Distance Units
 
 ``DistanceUnit.CM`` is cm
+
 ``DistanceUnit.MM`` is mm
+
 ``DistanceUnit.INCH`` is inch
 
 ### Functions

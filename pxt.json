@@ -3,6 +3,10 @@
     "version": "0.0.1",
     "description": "DEFBU Blocks",
     "license": "MIT",
+    "authors": [
+        "Frank Buijze - DEFBU"
+    ],
+    "icon": "icon.png",
     "dependencies": {
         "core": "*"
     },

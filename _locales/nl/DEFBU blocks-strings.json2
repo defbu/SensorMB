@@ -4,5 +4,6 @@
   "defbu.DistanceUnit.MM|block": "mm",
   "defbu.getDistance|block": "afstand in %unit | trig %trig | echo %echo",
   "defbu|block": "DEFBU-blokken",
-  "{id:category}Defbu": "Defbu"
+  "{id:category}Defbu": "Defbu",
+  "{id:group}Distance": "Afstand"
 }

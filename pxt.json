@@ -13,8 +13,8 @@
     "files": [
         "README.md",
         "ultrasonic.ts",
-        "_locales/nl/DEFBU Blocks-jsdoc-strings.json",
-        "_locales/nl/DEFBU Blocks-strings.json"
+        "_locales/nl/DEFBU blocks-jsdoc-strings.json",
+        "_locales/nl/DEFBU blocks-strings.json"
     ],
     "testFiles": [
         "test.ts"

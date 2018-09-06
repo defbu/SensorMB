@@ -12,6 +12,7 @@
     },
     "files": [
         "README.md",
+        "OneWire.ts",
         "hc-sr04.ts",
         "ds18b20.ts",
         "_locales/nl/DEFBU blocks-jsdoc-strings.json",

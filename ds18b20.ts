@@ -34,9 +34,9 @@ namespace defbu {
     //% echo.fieldOptions.tooltips="false"
     //% group="Temperature"
     //% weight=45
-    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, writePin: DigitalPin = DigitalPin.P0, readPin: DigitalPin = DigitalPin.P1): number {
-        /*
+    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, writePin: DigitalPin = DigitalPin.P0, readPin: DigitalPin = DigitalPin.P1): number {        
         let sensor = new defbu.OneWire(readPin,writePin)
+        /*
         let val = sensor.init()
         let temp = 1000
         if (val != 1) {

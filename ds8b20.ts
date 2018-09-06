@@ -1,4 +1,3 @@
-/// <reference path="OneWire.ts"/>
 //% color=#ff4500 icon="\uf2db" block="DEFBU blocks"
 //% groups=['Distance','Temperature']
 namespace defbu {

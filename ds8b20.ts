@@ -36,6 +36,7 @@ namespace defbu {
     //% group="Temperature"
     //% weight=45
     export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, writePin: DigitalPin = DigitalPin.P0, readPin: DigitalPin = DigitalPin.P1): number {
+        /*
         let sensor = new defbu.OneWire(readPin,writePin)
         let val = sensor.init()
         let temp = 1000
@@ -47,14 +48,16 @@ namespace defbu {
             let temp = (b2<<8 | b1)
             if(b2 & 0x80) temp=temp | 0xFFFF0000;
             temp = temp * 100
-            if ((unit == TemperatureUnit.C) || (unit = TemperatureUnit.DC) || (unit == TemperatureUnit.CC)) {
+            if ((unit == TemperatureUnit.C) || (unit == TemperatureUnit.DC) || (unit == TemperatureUnit.CC)) {
                 return Math.idiv(temp, unit);
             }
             else {
                 temp = Math.idiv(temp * 9, 5) + 3200
                 return Math.idiv(temp, unit);
             }
-        }     
+        } 
+        */
+       return 10    
         
 
 

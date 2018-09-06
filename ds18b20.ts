@@ -41,18 +41,18 @@ namespace defbu {
         let temp = 1000
         if (val != 1) {
             sensor.writeByte(0xCC)
-            sensor.writeByte(0xBE);
+            sensor.writeByte(0xBE)
             let b1 = sensor.readByte()
             let b2 = sensor.readByte()            
             let temp = (b2<<8 | b1)
-            if(b2 & 0x80) temp=temp | 0xFFFF0000;
+            if(b2 & 0x80) temp=temp | 0xFFFF0000
             temp = temp * 100
             if ((unit == TemperatureUnit.C) || (unit == TemperatureUnit.DC) || (unit == TemperatureUnit.CC)) {
-                return Math.idiv(temp, unit);
+                return Math.idiv(temp, unit)
             }
             else {
                 temp = Math.idiv(temp * 9, 5) + 3200
-                return Math.idiv(temp, unit);
+                return Math.idiv(temp, unit)
             }
         } 
         */

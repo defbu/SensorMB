@@ -39,12 +39,13 @@ namespace defbu {
         let val = sensor.init()
         let temp = 30000
         if (val != 1) {
+            /*
             sensor.writeByte(0xCC)
             sensor.writeByte(0xBE)
             let b1 = sensor.readByte()
             let b2 = sensor.readByte()            
-            let temp = (b2<<8 | b1)
-            
+            let temp = (b2<<8 | b1)         
+            */
             //if(b2 & 0x80) temp=temp | 0xFFFF0000
 
             /*
@@ -57,7 +58,8 @@ namespace defbu {
                 return Math.idiv(temp, unit)
             }
             */
-           return temp
+           //return temp
+           return 1
         }
         else {
             return temp

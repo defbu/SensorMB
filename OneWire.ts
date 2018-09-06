@@ -16,11 +16,11 @@ namespace defbu {
             pins.digitalReadPin(this.readPin)
 
             pins.digitalWritePin(this.writePin,0)
-            control.waitMicros(600)
+            control.waitMicros(500)
             pins.digitalWritePin(this.writePin,1)
             control.waitMicros(30)
             let val =  pins.digitalReadPin(this.readPin)
-            control.waitMicros(600)
+            control.waitMicros(500)
             return val
         }
 

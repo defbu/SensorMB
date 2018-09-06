@@ -8,7 +8,9 @@ namespace defbu {
         //% block="mm"
         MM = 1000,
         //% block="inch"
-        INCH = 25400
+        INCH = 25400,
+        //% block="μs"
+        US= 1
     }
 
         /**

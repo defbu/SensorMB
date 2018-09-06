@@ -3,7 +3,7 @@
 This library provides support for the different DEFBU Blocks, see https://www.defbu.nl
 
 ## Distance HC-SR04
-Reads distance in ``mm``, ``cm`` or ``inch``.
+Reads distance in ``mm``, ``cm`` or ``inch`` or ``μs``.
 
 ### Distance Units
 
@@ -12,6 +12,8 @@ Reads distance in ``mm``, ``cm`` or ``inch``.
 ``DistanceUnit.MM`` is mm
 
 ``DistanceUnit.INCH`` is inch
+
+``DistanceUnit.US`` is μs
 
 ### Functions
 

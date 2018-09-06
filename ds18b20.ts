@@ -45,6 +45,8 @@ namespace defbu {
             let b2 = sensor.readByte()            
             let temp = (b2<<8 | b1)
             //if(b2 & 0x80) temp=temp | 0xFFFF0000
+
+            /*
             temp = temp * 100
             if ((unit == TemperatureUnit.C) || (unit == TemperatureUnit.DC) || (unit == TemperatureUnit.CC)) {
                 return Math.idiv(temp, unit)
@@ -53,6 +55,8 @@ namespace defbu {
                 temp = Math.idiv(temp * 9, 8000)  + 3200
                 return Math.idiv(temp, unit)
             }
+            */
+           return temp
         }
         else {
             return temp

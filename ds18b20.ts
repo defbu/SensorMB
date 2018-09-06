@@ -28,10 +28,10 @@ namespace defbu {
     //% blockId="defbu_get_temperature" block="temperature in %unit | write %writePin | read %readPin"
     //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% unit.fieldOptions.tooltips="false"
-    //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
-    //% trig.fieldOptions.tooltips="false"
-    //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3
-    //% echo.fieldOptions.tooltips="false"
+    //% writePin.fieldEditor="gridpicker" trig.fieldOptions.columns=3
+    //% writePin.fieldOptions.tooltips="false"
+    //% readPin.fieldEditor="gridpicker" echo.fieldOptions.columns=3
+    //% readPin.fieldOptions.tooltips="false"
     //% group="Temperature"
     //% weight=45
     export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, writePin: DigitalPin = DigitalPin.P0, readPin: DigitalPin = DigitalPin.P1): number {        

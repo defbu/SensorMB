@@ -44,7 +44,7 @@ namespace defbu {
             let b1 = sensor.readByte()
             let b2 = sensor.readByte()            
             let temp = (b2<<8 | b1)
-            if(b2 & 0x80) temp=temp | 0xFFFF0000
+            //if(b2 & 0x80) temp=temp | 0xFFFF0000
             temp = temp * 100
             if ((unit == TemperatureUnit.C) || (unit == TemperatureUnit.DC) || (unit == TemperatureUnit.CC)) {
                 return Math.idiv(temp, unit)

@@ -18,6 +18,8 @@ namespace defbu {
          * @param echo Pin connected to echo, eg: DigitalPin.P1
          */
         //% blockId="defbu_get_distance" block="distance in %unit | trig %trig | echo %echo"
+        //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
+        //% unit.fieldOptions.tooltips="false"
         //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
         //% trig.fieldOptions.tooltips="false"
         //% echo.fieldEditor="gridpicker" echo.fieldOptions.columns=3

@@ -50,7 +50,7 @@ namespace defbu {
                 return Math.idiv(temp, unit)
             }
             else {
-                temp = Math.idiv(temp * 9, 5) + 3200
+                temp = Math.idiv(temp * 9, 8000)  + 3200
                 return Math.idiv(temp, unit)
             }
         } 

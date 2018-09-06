@@ -44,6 +44,7 @@ namespace defbu {
             let b1 = sensor.readByte()
             let b2 = sensor.readByte()            
             let temp = (b2<<8 | b1)
+            
             //if(b2 & 0x80) temp=temp | 0xFFFF0000
 
             /*

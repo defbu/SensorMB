@@ -48,7 +48,7 @@ namespace defbu {
         }
 
         writeByte(byte: number) {
-            let i = 0;
+            let i = 0
             for (i = 0; i < 8; i++) {
                 if (byte & 1) {
                     this.writeBit(1)
@@ -70,10 +70,10 @@ namespace defbu {
         }
 
         readByte(): number {
-            let byte = 0;
-            let i = 0;
+            let byte = 0
+            let i = 0
             for (i = 0; i < 8; i++) {
-                byte = byte | this.readBit()<< i;
+                byte = byte | this.readBit()<< i
             }
             return byte
         }

@@ -23,9 +23,9 @@ namespace defbu {
      * Measures the temperature with DS18B20: range -55°C - 125 °C or -67°F - 257°F
      * @param unit unit of distance, eg: defbu.TemperatureUnit.C
      * @param writePin Pin connected to out, eg: DigitalPin.P0
-     * @param readPin pin connected to in, eg: DigitalPin.P1
+     * @param readPin Pin connected to in, eg: DigitalPin.P1
      */
-    //% blockId="defbu_get_temperature" block="temperature in %unit | in %pinin | out %pinout"
+    //% blockId="defbu_get_temperature" block="temperature in %unit | write %writePin | read %readPin"
     //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% unit.fieldOptions.tooltips="false"
     //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3

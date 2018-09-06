@@ -1,6 +1,6 @@
 namespace defbu {
 
-    public class OneWire {
+    class OneWire {
         readPin: DigitalPin
         writePin: DigitalPin
 

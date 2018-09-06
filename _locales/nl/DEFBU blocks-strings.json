@@ -3,8 +3,16 @@
   "defbu.DistanceUnit.INCH|block": "inch",
   "defbu.DistanceUnit.MM|block": "mm",
   "defbu.DistanceUnit.US|block": "μs",
+  "defbu.TemperatureUnit.CC|block": "°cC",
+  "defbu.TemperatureUnit.CF|block": "°cF",
+  "defbu.TemperatureUnit.C|block": "°C",
+  "defbu.TemperatureUnit.DC|block": "°dC",
+  "defbu.TemperatureUnit.DF|block": "°dF",
+  "defbu.TemperatureUnit.F|block": "°F",
   "defbu.getDistance|block": "afstand in %unit | trig %trig | echo %echo",
+  "defbu.getTemperature|block": "temperatuur in %unit | write %pinin | read %pinout",
   "defbu|block": "DEFBU-blokken",
   "{id:category}Defbu": "Defbu",
-  "{id:group}Distance": "Afstand"
+  "{id:group}Distance": "Afstand",  
+  "{id:group}Temperature": "Temperatuur" 
 }

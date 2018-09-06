@@ -36,7 +36,6 @@ namespace defbu {
     //% weight=45
     export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, writePin: DigitalPin = DigitalPin.P0, readPin: DigitalPin = DigitalPin.P1): number {        
         let sensor = new defbu.OneWire(readPin,writePin)
-        /*
         let val = sensor.init()
         let temp = 1000
         if (val != 1) {
@@ -55,11 +54,6 @@ namespace defbu {
                 return Math.idiv(temp, unit)
             }
         } 
-        */
-       return 10    
-        
-
-
     }
 
 }

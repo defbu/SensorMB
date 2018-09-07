@@ -19,7 +19,7 @@ namespace defbu {
      * @param trig Pin connected to trig, eg: DigitalPin.P0
      * @param echo Pin connected to echo, eg: DigitalPin.P1
      */
-    //% blockId="defbu_get_distance" block="distance in %unit | trig %trig | echo %echo"
+    //% blockId="defbu_get_distance_pins" block="distance in %unit | trig %trig | echo %echo"
     //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% unit.fieldOptions.tooltips="false"
     //% trig.fieldEditor="gridpicker" trig.fieldOptions.columns=3
@@ -28,7 +28,8 @@ namespace defbu {
     //% echo.fieldOptions.tooltips="false"
     //% group="Distance"
     //% weight=45
-    export function getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number {
+    //% advanced=true
+    export function getDistancePins(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number {
         const trigPinNumber: number = trig        
         const echoPinNumber: number = echo
         
@@ -56,5 +57,18 @@ namespace defbu {
             objectDistance = MAX_DIST_MICROMETER
         }
         return Math.idiv(objectDistance, unit)
+    }
+
+    /**
+     * Measures the distance with HC-SR04: range 0 - 300 cm
+     * @param unit unit of distance, eg: defbu.DistanceUnit.CM
+     */
+    //% blockId="defbu_get_distance" block="distance in %unit
+    //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
+    //% unit.fieldOptions.tooltips="false"
+    //% group="Distance"
+    //% weight=45
+    export function getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM): number {
+       return getDistancePins(unit,DigitalPin.P0,DigitalPin.P1)
     }
 }

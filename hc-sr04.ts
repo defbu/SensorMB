@@ -63,7 +63,7 @@ namespace defbu {
      * Measures the distance with HC-SR04: range 0 - 300 cm
      * @param unit unit of distance, eg: defbu.DistanceUnit.CM
      */
-    //% blockId="defbu_get_distance" block="distance in %unit
+    //% blockId="defbu_get_distance" block="distance in %unit"
     //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% unit.fieldOptions.tooltips="false"
     //% group="Distance"

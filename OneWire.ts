@@ -16,7 +16,7 @@ namespace defbu {
             pins.digitalWritePin(this.dataPin,0)
             control.waitMicros(600) //480
             pins.digitalWritePin(this.dataPin,1)
-            control.waitMicros(30) // 70
+            control.waitMicros(40) // 70
             let presence =  pins.digitalReadPin(this.dataPin)
             control.waitMicros(600) // 410
             if (presence == 0) {

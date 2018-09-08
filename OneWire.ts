@@ -73,7 +73,16 @@ namespace defbu {
         }
 
         skip() : void {
-            this.writeByte(0xCC)
+            this.writeBit(0);
+            this.writeBit(0);
+            this.writeBit(1);
+            this.writeBit(1);
+           
+            this.writeBit(0);
+            this.writeBit(0);
+            this.writeBit(1);
+            this.writeBit(1);
+            //this.writeByte(0xCC)
         }
 
 

@@ -34,24 +34,14 @@ namespace defbu {
     export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): number {        
         let sensor = new defbu.OneWire(dataPin)
         let presence = sensor.reset()
+        let temp = 30000
         if (presence) {
             sensor.skip()
-            return 1
-        }
-        else {
-            return 3000
-        }
-        //return 1
-        /*
-        let temp = 30000
-        if (val != 1) {
-            
-            sensor.writeByte(0xCC)
             sensor.writeByte(0xBE)
             let b1 = sensor.readByte()
             let b2 = sensor.readByte()            
             let temp = (b2<<8 | b1)         
-            */
+            /*
             //if(b2 & 0x80) temp=temp | 0xFFFF0000
 
             /*
@@ -65,12 +55,12 @@ namespace defbu {
             }
             
            //return temp
+           */
            return 1
         }
         else {
             return temp
-        }
-        */
+        }        
     }
 
 }

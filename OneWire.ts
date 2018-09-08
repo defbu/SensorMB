@@ -24,60 +24,56 @@ namespace defbu {
             }
         }
 
-        sendZero() : void {
-            pins.digitalWritePin(this.dataPin,0)
-            control.waitMicros(75)
-            pins.digitalWritePin(this.dataPin,1)
-            control.waitMicros(6)
-        }
-
-        sendOne() : void {
-            pins.digitalWritePin(this.dataPin,0)
-            control.waitMicros(1)
-            pins.digitalWritePin(this.dataPin,1)
-            control.waitMicros(80)
-        }
-
         writeBit( b: number) : void {
             if (b == 1) {
-                this.sendOne()
+                pins.digitalWritePin(this.dataPin,0)
+                control.waitMicros(6)
+                pins.digitalWritePin(this.dataPin,1)
+                control.waitMicros(64)
             }
             else {
-                this.sendZero()
-            }
-        }
-
-        writeByte(byte: number) {
-            let i = 0
-            for (i = 0; i < 8; i++) {
-                if (byte & 1) {
-                    this.writeBit(1)
-                }
-                else {
-                    this.writeBit(0)
-                }
-                byte = byte>>1
+                pins.digitalWritePin(this.dataPin,0)
+                control.waitMicros(60)
+                pins.digitalWritePin(this.dataPin,1)
+                control.waitMicros(10)
             }
         }
 
         readBit() : number {
             pins.digitalWritePin(this.dataPin,0)
+            control.waitMicros(6)
             pins.digitalWritePin(this.dataPin,1)
-            control.waitMicros(20)
+            control.waitMicros(9)
             let b = pins.digitalReadPin(this.dataPin)
-            control.waitMicros(60)
+            control.waitMicros(55)
             return b            
         }
 
-        readByte(): number {
-            let byte = 0
+        writeByte(byte: number) {
             let i = 0
             for (i = 0; i < 8; i++) {
-                byte = byte | this.readBit()<< i
+                this.writeBit(byte & 0x01)
+                byte = byte>>1
             }
-            return byte
+        }
+        readByte() : number {
+            let i = 0
+            let result = 0
+            for (i = 0; i < 8; i++) {
+                result >>= 1
+                if (this.readBit()) {
+                    result |= 0x80
+                }
+            }
+            return result
         }
 
+        skip() : void {
+            this.writeByte(0xCC)
+        }
+
+
+        /*
         convert() : string {
             this.writeByte(0x44)
             let i = 0
@@ -90,6 +86,7 @@ namespace defbu {
             }
             return ("j")
         }
+        */
 
 
     }

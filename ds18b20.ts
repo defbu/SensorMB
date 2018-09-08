@@ -35,10 +35,11 @@ namespace defbu {
         let sensor = new defbu.OneWire(dataPin)
         let presence = sensor.reset()
         if (presence) {
+            sensor.skip()
             return 1
         }
         else {
-            return 2
+            return 3000
         }
         //return 1
         /*

@@ -32,10 +32,10 @@ namespace defbu {
     //% group="Temperature"
     //% weight=45
     export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): number {        
-        //let sensor = new defbu.OneWire(dataPin)
-        //let val = sensor.init()
-        //return val
-        return 1
+        let sensor = new defbu.OneWire(dataPin)
+        let val = sensor.init()
+        return val
+        //return 1
         /*
         let temp = 30000
         if (val != 1) {

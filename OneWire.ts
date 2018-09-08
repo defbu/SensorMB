@@ -10,7 +10,7 @@ namespace defbu {
 
         init() : number {
             pins.digitalWritePin(this.dataPin,1)
-            pins.setPull(this.dataPin,PinPullMode.PullNone)
+            pins.setPull(this.dataPin,PinPullMode.PullUp)
             pins.digitalReadPin(this.dataPin)
 
             pins.digitalWritePin(this.dataPin,0)

@@ -24,7 +24,7 @@ namespace defbu {
      * @param unit unit of distance, eg: defbu.TemperatureUnit.C
      * @param pin Data pin, eg: DigitalPin.P0
      */
-    //% blockId="defbu_get_temperature" block="temperature in %unit | write %pin
+    //% blockId="defbu_get_temperature" block="temperature in %unit | data %dataPin
     //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% unit.fieldOptions.tooltips="false"
     //% dataPin.fieldEditor="gridpicker" trig.fieldOptions.columns=3

@@ -11,7 +11,7 @@
   "defbu.TemperatureUnit.F|block": "°F",
   "defbu.getDistancePins|block": "afstand in %unit | trig %trig | echo %echo",
   "defbu.getDistance|block": "afstand in %unit",
-  "defbu.getTemperature|block": "temperatuur in %unit | lees %pinin | schrijf %pinout",
+  "defbu.getTemperature|block": "temperatuur in %unit | data %dataPin",
   "defbu|block": "DEFBU-blokken",
   "{id:category}Defbu": "Defbu",
   "{id:group}Distance": "Afstand",  

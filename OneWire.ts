@@ -9,16 +9,13 @@ namespace defbu {
         }
 
         reset() : boolean {
-            pins.digitalWritePin(this.dataPin,1)
             pins.setPull(this.dataPin,PinPullMode.PullUp)
-            pins.digitalReadPin(this.dataPin)
-
             pins.digitalWritePin(this.dataPin,0)
-            control.waitMicros(500)
+            control.waitMicros(480)
             pins.digitalWritePin(this.dataPin,1)
-            control.waitMicros(30)
+            control.waitMicros(70)
             let val =  pins.digitalReadPin(this.dataPin)
-            control.waitMicros(500)
+            control.waitMicros(410)
             if (val == 0) {
                 return true
             }

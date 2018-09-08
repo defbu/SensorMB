@@ -34,13 +34,16 @@ namespace defbu {
     export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): number {        
         let sensor = new defbu.OneWire(dataPin)
         let presence = sensor.reset()
-        if (presence) {
+        return presence
+        /*
+        if (presence == 0) {
             sensor.skip()
             return 1
         }
         else {
             return 3000
         }
+        */
         //return 1
         /*
         let temp = 30000

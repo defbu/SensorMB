@@ -8,7 +8,7 @@ namespace defbu {
             this.dataPin = dataPin
         }
 
-        reset() : boolean {
+        reset() : number {
             pins.setPull(this.dataPin,PinPullMode.PullUp)
             pins.digitalWritePin(this.dataPin,0)
             control.waitMicros(480)
@@ -16,12 +16,7 @@ namespace defbu {
             control.waitMicros(70)
             let val =  pins.digitalReadPin(this.dataPin)
             control.waitMicros(410)
-            if (val == 0) {
-                return true
-            }
-            else {
-                return false
-            }
+            return val
         }
 
         writeBit( b: number) : void {

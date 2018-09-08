@@ -1,40 +1,38 @@
 namespace defbu {
 
     export class OneWire {
-        readPin: DigitalPin
-        writePin: DigitalPin
+        pin: DigitalPin
 
 
-        constructor(readPin: DigitalPin,writePin: DigitalPin) {
-            this.readPin = readPin
-            this.writePin = writePin
+        constructor(pin: DigitalPin) {
+            this.pin = pin
         }
 
         init() : number {
-            pins.digitalWritePin(this.writePin,1)
-            pins.setPull(this.writePin,PinPullMode.PullUp)
-            pins.digitalReadPin(this.readPin)
+            pins.digitalWritePin(this.pin,1)
+            pins.setPull(this.pin,PinPullMode.PullNone)
+            pins.digitalReadPin(this.pin)
 
-            pins.digitalWritePin(this.writePin,0)
+            pins.digitalWritePin(this.pin,0)
             control.waitMicros(500)
-            pins.digitalWritePin(this.writePin,1)
+            pins.digitalWritePin(this.pin,1)
             control.waitMicros(30)
-            let val =  pins.digitalReadPin(this.readPin)
+            let val =  pins.digitalReadPin(this.pin)
             control.waitMicros(500)
             return val
         }
 
         sendZero() : void {
-            pins.digitalWritePin(this.writePin,0)
+            pins.digitalWritePin(this.pin,0)
             control.waitMicros(75)
-            pins.digitalWritePin(this.writePin,1)
+            pins.digitalWritePin(this.pin,1)
             control.waitMicros(6)
         }
 
         sendOne() : void {
-            pins.digitalWritePin(this.writePin,0)
+            pins.digitalWritePin(this.pin,0)
             control.waitMicros(1)
-            pins.digitalWritePin(this.writePin,1)
+            pins.digitalWritePin(this.pin,1)
             control.waitMicros(80)
         }
 
@@ -61,10 +59,10 @@ namespace defbu {
         }
 
         readBit() : number {
-            pins.digitalWritePin(this.writePin,0)
-            pins.digitalWritePin(this.writePin,1)
+            pins.digitalWritePin(this.pin,0)
+            pins.digitalWritePin(this.pin,1)
             control.waitMicros(20)
-            let b = pins.digitalReadPin(this.readPin)
+            let b = pins.digitalReadPin(this.pin)
             control.waitMicros(60)
             return b            
         }

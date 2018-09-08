@@ -22,24 +22,23 @@ namespace defbu {
     /**
      * Measures the temperature with DS18B20: range -55°C - 125 °C or -67°F - 257°F
      * @param unit unit of distance, eg: defbu.TemperatureUnit.C
-     * @param writePin Pin connected to out, eg: DigitalPin.P0
-     * @param readPin Pin connected to in, eg: DigitalPin.P1
+     * @param pin Pin, eg: DigitalPin.P0
      */
-    //% blockId="defbu_get_temperature" block="temperature in %unit | write %writePin | read %readPin"
+    //% blockId="defbu_get_temperature" block="temperature in %unit | write %pin
     //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% unit.fieldOptions.tooltips="false"
-    //% writePin.fieldEditor="gridpicker" trig.fieldOptions.columns=3
-    //% writePin.fieldOptions.tooltips="false"
-    //% readPin.fieldEditor="gridpicker" echo.fieldOptions.columns=3
-    //% readPin.fieldOptions.tooltips="false"
+    //% pin.fieldEditor="gridpicker" trig.fieldOptions.columns=3
+    //% pin.fieldOptions.tooltips="false"
     //% group="Temperature"
     //% weight=45
-    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, writePin: DigitalPin = DigitalPin.P0, readPin: DigitalPin = DigitalPin.P1): number {        
-        let sensor = new defbu.OneWire(readPin,writePin)
+    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, pin: DigitalPin = DigitalPin.P0): number {        
+        let sensor = new defbu.OneWire(pin)
         let val = sensor.init()
+        return val
+        /*
         let temp = 30000
         if (val != 1) {
-            /*
+            
             sensor.writeByte(0xCC)
             sensor.writeByte(0xBE)
             let b1 = sensor.readByte()
@@ -57,13 +56,14 @@ namespace defbu {
                 temp = Math.idiv(temp * 9, 8000)  + 3200
                 return Math.idiv(temp, unit)
             }
-            */
+            
            //return temp
            return 1
         }
         else {
             return temp
         }
+        */
     }
 
 }

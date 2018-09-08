@@ -31,7 +31,7 @@ namespace defbu {
         writeBit( b: number) : void {
             if (b == 1) {
                 pins.digitalWritePin(this.dataPin,0)
-                control.waitMicros(1) // 6
+                //control.waitMicros(1) // 6
                 pins.digitalWritePin(this.dataPin,1)
                 control.waitMicros(80) // 64
             }

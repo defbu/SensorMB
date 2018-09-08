@@ -31,15 +31,15 @@ namespace defbu {
         writeBit( b: number) : void {
             if (b == 1) {
                 pins.digitalWritePin(this.dataPin,0)
-                control.waitMicros(6)
+                control.waitMicros(1) // 6
                 pins.digitalWritePin(this.dataPin,1)
-                control.waitMicros(64)
+                control.waitMicros(80) // 64
             }
             else {
                 pins.digitalWritePin(this.dataPin,0)
-                control.waitMicros(60)
+                control.waitMicros(75) // 60
                 pins.digitalWritePin(this.dataPin,1)
-                control.waitMicros(10)
+                control.waitMicros(6) // 10
             }
         }
 

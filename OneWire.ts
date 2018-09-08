@@ -1,38 +1,38 @@
 namespace defbu {
 
     export class OneWire {
-        pin: DigitalPin
+        dataPin: DigitalPin
 
 
-        constructor(pin: DigitalPin) {
-            this.pin = pin
+        constructor(dataPin: DigitalPin) {
+            this.dataPin = dataPin
         }
 
         init() : number {
-            pins.digitalWritePin(this.pin,1)
-            pins.setPull(this.pin,PinPullMode.PullNone)
-            pins.digitalReadPin(this.pin)
+            pins.digitalWritePin(this.dataPin,1)
+            pins.setPull(this.dataPin,PinPullMode.PullNone)
+            pins.digitalReadPin(this.dataPin)
 
-            pins.digitalWritePin(this.pin,0)
+            pins.digitalWritePin(this.dataPin,0)
             control.waitMicros(500)
-            pins.digitalWritePin(this.pin,1)
+            pins.digitalWritePin(this.dataPin,1)
             control.waitMicros(30)
-            let val =  pins.digitalReadPin(this.pin)
+            let val =  pins.digitalReadPin(this.dataPin)
             control.waitMicros(500)
             return val
         }
 
         sendZero() : void {
-            pins.digitalWritePin(this.pin,0)
+            pins.digitalWritePin(this.dataPin,0)
             control.waitMicros(75)
-            pins.digitalWritePin(this.pin,1)
+            pins.digitalWritePin(this.dataPin,1)
             control.waitMicros(6)
         }
 
         sendOne() : void {
-            pins.digitalWritePin(this.pin,0)
+            pins.digitalWritePin(this.dataPin,0)
             control.waitMicros(1)
-            pins.digitalWritePin(this.pin,1)
+            pins.digitalWritePin(this.dataPin,1)
             control.waitMicros(80)
         }
 
@@ -59,10 +59,10 @@ namespace defbu {
         }
 
         readBit() : number {
-            pins.digitalWritePin(this.pin,0)
-            pins.digitalWritePin(this.pin,1)
+            pins.digitalWritePin(this.dataPin,0)
+            pins.digitalWritePin(this.dataPin,1)
             control.waitMicros(20)
-            let b = pins.digitalReadPin(this.pin)
+            let b = pins.digitalReadPin(this.dataPin)
             control.waitMicros(60)
             return b            
         }

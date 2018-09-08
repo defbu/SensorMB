@@ -22,17 +22,17 @@ namespace defbu {
     /**
      * Measures the temperature with DS18B20: range -55°C - 125 °C or -67°F - 257°F
      * @param unit unit of distance, eg: defbu.TemperatureUnit.C
-     * @param pin Pin, eg: DigitalPin.P0
+     * @param pin Data pin, eg: DigitalPin.P0
      */
     //% blockId="defbu_get_temperature" block="temperature in %unit | write %pin
     //% unit.fieldEditor="gridpicker" trig.fieldOptions.columns=3
     //% unit.fieldOptions.tooltips="false"
-    //% pin.fieldEditor="gridpicker" trig.fieldOptions.columns=3
-    //% pin.fieldOptions.tooltips="false"
+    //% dataPin.fieldEditor="gridpicker" trig.fieldOptions.columns=3
+    //% dataPin.fieldOptions.tooltips="false"
     //% group="Temperature"
     //% weight=45
-    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, pin: DigitalPin = DigitalPin.P0): number {        
-        let sensor = new defbu.OneWire(pin)
+    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): number {        
+        let sensor = new defbu.OneWire(dataPin)
         let val = sensor.init()
         return val
         /*

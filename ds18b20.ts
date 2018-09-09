@@ -17,25 +17,7 @@ namespace defbu {
         CF = 1
     }
 
-    function convert(sensor: defbu.OneWire) : boolean {
-        sensor.writeByte(0x44);
-        let i = 0
-        let b = 0
-        while ((b == 0) && (i < 2000)) {                
-            b = sensor.readBit()
-            i++
-        }
-        if (i == 2000) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
 
-    function read(sensor: defbu.OneWire) {
-        sensor.writeByte(0xBE)
-    }
 
 
 
@@ -57,9 +39,9 @@ namespace defbu {
         let temp = 30000
         if (presence) {
             sensor.skip()
-            let b = this.convert()
+            let b = sensor.ds18b20Convert()
             if (b) {
-                this.read()
+                sensor.ds18b20ReadScratchpad()
                 return 1
             }
             else {

@@ -75,5 +75,27 @@ namespace defbu {
         skip() : void {
             this.writeByte(0xCC)
         }
+
+        ds18b20Convert() : boolean {
+            this.writeByte(0x44);
+            let i = 0
+            let b = 0
+            while ((b == 0) && (i < 2000)) {                
+                b = this.readBit()
+                i++
+            }
+            if (i == 2000) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    
+        ds18b20ReadScratchpad(): number[] {
+            let bytes:number[]
+            this.writeByte(0xBE)
+            return bytes
+        }
     }
 }

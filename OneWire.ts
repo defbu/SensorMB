@@ -73,16 +73,7 @@ namespace defbu {
         }
 
         skip() : void {
-            this.writeBit(0);
-            this.writeBit(0);
-            this.writeBit(1);
-            this.writeBit(1);
-           
-            this.writeBit(0);
-            this.writeBit(0);
-            this.writeBit(1);
-            this.writeBit(1);
-            //this.writeByte(0xCC)
+            this.writeByte(0xCC)
         }
 
         convert() : boolean {
@@ -99,6 +90,10 @@ namespace defbu {
             else {
                 return true;
             }
+        }
+
+        read() {
+            this.writeByte(0xBE)
         }
 
 

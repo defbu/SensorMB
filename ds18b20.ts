@@ -17,6 +17,26 @@ namespace defbu {
         CF = 1
     }
 
+    function convert(sensor: defbu.OneWire) : boolean {
+        sensor.writeByte(0x44);
+        let i = 0
+        let b = 0
+        while ((b == 0) && (i < 2000)) {                
+            b = sensor.readBit()
+            i++
+        }
+        if (i == 2000) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function read(sensor: defbu.OneWire) {
+        sensor.writeByte(0xBE)
+    }
+
 
 
     /**
@@ -37,10 +57,22 @@ namespace defbu {
         let temp = 30000
         if (presence) {
             sensor.skip()
-            let b = sensor.convert()
+            let b = this.convert()
+            if (b) {
+                return 1
+            }
+            else {
+                return temp
+            }
+            //Issue Read
+            this.read();
+            /*
+            let b1 = sensor.readByte()
+            let b2 = sensor.readByte()
 
-            //let b1 = sensor.readByte()
-            //let b2 = sensor.readByte()            
+            let b1 = sensor.readByte()
+            let b2 = sensor.readByte()            
+            */
             //let temp = (b2<<8 | b1)         
             /*
             //if(b2 & 0x80) temp=temp | 0xFFFF0000
@@ -57,12 +89,7 @@ namespace defbu {
             
            //return temp
            */
-          if (b) {
-                return 1
-          }
-          else {
-                return 0
-          }
+         
         }
         else {
             return temp

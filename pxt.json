@@ -17,7 +17,8 @@
         "main.ts",
         "_locales/nl/DEFBU blocks-jsdoc-strings.json",
         "_locales/nl/DEFBU blocks-strings.json",
-        "ds18b20.cpp"
+        "ds18b20.cpp",
+        "shims.d.ts"
     ],
     "testFiles": [
         "test.ts"

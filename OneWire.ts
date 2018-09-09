@@ -76,6 +76,10 @@ namespace defbu {
             this.writeByte(0xCC)
         }
 
+        readRom() : void {
+            this.writeByte(0x33)
+        }
+
         ds18b20Convert() : boolean {
             this.writeByte(0x44)
             let i = 0

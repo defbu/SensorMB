@@ -38,7 +38,8 @@ namespace defbu {
         let presence = sensor.reset()
         let temp = 30000
         if (presence) {
-            sensor.skip()
+            sensor.readRom()            
+            //sensor.skip()
             let b = sensor.ds18b20Convert()
             if (b) {
                 //sensor.reset()

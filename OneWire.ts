@@ -75,43 +75,5 @@ namespace defbu {
         skip() : void {
             this.writeByte(0xCC)
         }
-
-        convert() : boolean {
-            this.writeByte(0x44);
-            let i = 0
-            let b = 0
-            while ((b == 0) && (i < 2000)) {                
-                b = this.readBit()
-                i++
-            }
-            if (i == 2000) {
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
-
-        read() {
-            this.writeByte(0xBE)
-        }
-
-
-        /*
-        convert() : string {
-            this.writeByte(0x44)
-            let i = 0
-            for (i = 0; i < 1000; i++) {
-                control.waitMicros(900)
-                let b = this.readBit()
-                if (b == 1) {
-                    break
-                }
-            }
-            return ("j")
-        }
-        */
-
-
     }
 }

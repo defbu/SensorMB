@@ -512,7 +512,7 @@ namespace defbu {
   //MicroBit uBit;
   MicroBitPin pin = uBit.io.P0;
   //%
-  int16_t getTemperature(int p) {
+  int16_t Temperature(int p) {
     
     switch(p){
       case 0: pin = uBit.io.P0; break;

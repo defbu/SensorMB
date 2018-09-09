@@ -59,13 +59,13 @@ namespace defbu {
             sensor.skip()
             let b = this.convert()
             if (b) {
+                this.read()
                 return 1
             }
             else {
                 return temp
             }
-            //Issue Read
-            this.read();
+            
             /*
             let b1 = sensor.readByte()
             let b2 = sensor.readByte()

@@ -92,8 +92,9 @@ namespace defbu {
             }
         }
     
-        ds18b20ReadScratchpad(): void {
+        ds18b20ReadScratchpad(): number {
             this.writeByte(0xBE)
+            return 10
         }
     }
 }

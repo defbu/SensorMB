@@ -92,10 +92,8 @@ namespace defbu {
             }
         }
     
-        ds18b20ReadScratchpad(): number[] {
-            let bytes:number[]
+        ds18b20ReadScratchpad(): void {
             this.writeByte(0xBE)
-            return bytes
         }
     }
 }

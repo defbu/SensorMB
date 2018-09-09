@@ -40,7 +40,8 @@ namespace defbu {
         if (presence) {
             sensor.readRom()            
             //sensor.skip()
-            let b = sensor.ds18b20Convert()
+            //let b = sensor.ds18b20Convert()
+            let b = true
             if (b) {
                 //sensor.reset()
                 //sensor.skip()

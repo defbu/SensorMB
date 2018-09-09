@@ -84,18 +84,18 @@ namespace defbu {
                 b = this.readBit()
                 i++
             }
+            control.waitMicros(750)
             if (i == 2000) {
                 return false
             }
             else {
                 return true
             }
-            control.waitMicros(500)
+            
         }
     
         ds18b20ReadScratchpad(): number {
             this.writeByte(0xBE)
-            control.waitMicros(500)
             return 10
         }
     }

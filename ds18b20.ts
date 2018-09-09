@@ -17,9 +17,11 @@ namespace defbu {
         CF = 1
     }
 
-
-
-
+    //% shim=defbu::getTemperature
+    export function Temperature(p: number): number {
+        // Fake function for simulator
+        return 0
+    }
 
     /**
      * Measures the temperature with DS18B20: range -55°C - 125 °C or -67°F - 257°F
@@ -33,53 +35,28 @@ namespace defbu {
     //% dataPin.fieldOptions.tooltips="false"
     //% group="Temperature"
     //% weight=45
-    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): number {        
-        let sensor = new defbu.OneWire(dataPin)
-        let presence = sensor.reset()
-        let temp = 30000
-        if (presence) {
-            sensor.readRom()            
-            //sensor.skip()
-            //let b = sensor.ds18b20Convert()
-            let b = true
-            if (b) {
-                //sensor.reset()
-                //sensor.skip()
-                //sensor.ds18b20ReadScratchpad()
-                return 1
-            }
-            else {
-                return temp
-            }
-            
-            /*
-            let b1 = sensor.readByte()
-            let b2 = sensor.readByte()
-
-            let b1 = sensor.readByte()
-            let b2 = sensor.readByte()            
-            */
-            //let temp = (b2<<8 | b1)         
-            /*
-            //if(b2 & 0x80) temp=temp | 0xFFFF0000
-
-            /*
-            temp = temp * 100
-            if ((unit == TemperatureUnit.C) || (unit == TemperatureUnit.DC) || (unit == TemperatureUnit.CC)) {
-                return Math.idiv(temp, unit)
-            }
-            else {
-                temp = Math.idiv(temp * 9, 8000)  + 3200
-                return Math.idiv(temp, unit)
-            }
-            
-           //return temp
-           */
-         
+    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): string {        
+        let temp = Temperature(dataPin);
+        let x = (temp / 100)
+        let y = (temp % 100)
+        let z = ''
+        if(temp >= 0){
+          if(y < 10){
+            z = x.toString() + '.0' + y.toString()
+          }
+          else{
+            z = x.toString() + '.' + y.toString()
+          }
         }
-        else {
-            return temp
-        }        
+        else if(temp < 0){
+          if(y > -10){
+            z = '-' + (-x).toString() + '.0' + (-y).toString()
+          }
+          else{
+            z = '-' + (-x).toString() + '.' + (-y).toString()
+          }
+        }
+        return z
     }
 
 }

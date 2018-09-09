@@ -96,7 +96,6 @@ namespace defbu {
     
         ds18b20ReadScratchpad(): number {
             this.writeByte(0xBE)
-            control.waitMicros(750)
             return 10
         }
     }

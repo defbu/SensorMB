@@ -13,8 +13,10 @@
     "files": [
         "README.md",
         "hc-sr04.ts",
+        "ds18b20.ts",
         "_locales/nl/DEFBU blocks-jsdoc-strings.json",
-        "_locales/nl/DEFBU blocks-strings.json"
+        "_locales/nl/DEFBU blocks-strings.json",
+        "ds18b20.cpp"
     ],
     "testFiles": [
         "test.ts"

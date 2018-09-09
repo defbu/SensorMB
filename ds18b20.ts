@@ -41,7 +41,7 @@ namespace defbu {
             sensor.skip()
             let b = sensor.ds18b20Convert()
             if (b) {
-                //sensor.ds18b20ReadScratchpad()
+                sensor.ds18b20ReadScratchpad()
                 return 1
             }
             else {

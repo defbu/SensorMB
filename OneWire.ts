@@ -77,7 +77,7 @@ namespace defbu {
         }
 
         ds18b20Convert() : boolean {
-            this.writeByte(0x44);
+            this.writeByte(0x44)
             let i = 0
             let b = 0
             while ((b == 0) && (i < 2000)) {                
@@ -85,15 +85,17 @@ namespace defbu {
                 i++
             }
             if (i == 2000) {
-                return false;
+                return false
             }
             else {
-                return true;
+                return true
             }
+            control.waitMicros(500)
         }
     
         ds18b20ReadScratchpad(): number {
             this.writeByte(0xBE)
+            control.waitMicros(500)
             return 10
         }
     }

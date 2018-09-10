@@ -4,17 +4,19 @@ namespace defbu {
 
     export const enum TemperatureUnit {
         //% block="°C"
-        C = "C",
+        C = 0,
         //% block="°dC"
-        DC = "DC",
+        DC = 1,
         //% block="°cC"
-        CC = "CC",
+        CC = 2,
         //% block="°F"
-        F = "F",
+        F = 3,
         //% block="°dF"
-        DF = "DF",
+        DF = 4,
         //% block="°cF"
-        CF = "CF"
+        CF = 5,
+        //% block="raw"
+        RAW = 6
     }
 
     //% shim=defbu::Temperature
@@ -68,8 +70,11 @@ namespace defbu {
       else if (unit == TemperatureUnit.DF) {
           return Math.idiv(temp * 9, 50) + 320
       }
-      else {
+      else if (unit == TemperatureUnit.CF) {
           return Math.idiv(temp * 9, 5) + 3200
       } 
+      else {
+        return temp
+      }
     }
 }

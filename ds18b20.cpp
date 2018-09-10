@@ -518,22 +518,14 @@ namespace defbu {
       case 0: pin = uBit.io.P0; break;
       case 1: pin = uBit.io.P1; break;
       case 2: pin = uBit.io.P2; break;
-      case 3: pin = uBit.io.P3; break;
-      case 4: pin = uBit.io.P4; break;
       case 5: pin = uBit.io.P5; break;
-      case 6: pin = uBit.io.P6; break;
-      case 7: pin = uBit.io.P7; break;
       case 8: pin = uBit.io.P8; break;
-      case 9: pin = uBit.io.P9; break;
-      case 10: pin = uBit.io.P10; break;
       case 11: pin = uBit.io.P11; break;
       case 12: pin = uBit.io.P12; break;
       case 13: pin = uBit.io.P13; break;
       case 14: pin = uBit.io.P14; break;
       case 15: pin = uBit.io.P15; break;
       case 16: pin = uBit.io.P16; break;
-      case 19: pin = uBit.io.P19; break;
-      case 20: pin = uBit.io.P20; break;
       default: pin = uBit.io.P0;
     }
     

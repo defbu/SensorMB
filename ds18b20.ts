@@ -75,8 +75,11 @@ namespace defbu {
       else if (unit == TemperatureUnit.CF) {
           return Math.idiv(temp * 9, 5) + 3200
       } 
+      else if (unit == TemperatureUnit.RAWC) {
+        return temp / 100
+      }
       else {
-        return temp
+        return temp * 9 / 100 + 32
       }
     }
 }

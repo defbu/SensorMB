@@ -1,11 +1,14 @@
 {
   "defbu.getDistance": "Meten van afstand met HC-SR04: bereik 0 - 300 cm",
   "defbu.getDistancePins": "Meten van afstand met HC-SR04: bereik 0 - 300 cm",
-  "defbu.getDistancePins|param|echo": "Pin verbonden met echo, eg: DigitalPin.P1",
-  "defbu.getDistancePins|param|trig": "Pin verbonden met trig, eg: DigitalPin.P0",
-  "defbu.getDistancePins|param|unit": "afstandseenheid, eg: defbu.DistanceUnit.CM",
-  "defbu.getDistance|param|unit": "afstandseenheid, eg: defbu.DistanceUnit.CM",
+  "defbu.getDistancePins|param|echo": "Pin verbonden met echo, bv.: DigitalPin.P1",
+  "defbu.getDistancePins|param|trig": "Pin verbonden met trig, bv.: DigitalPin.P0",
+  "defbu.getDistancePins|param|unit": "afstandseenheid, bv.: defbu.DistanceUnit.CM",
+  "defbu.getDistance|param|unit": "afstandseenheid, bv.: defbu.DistanceUnit.CM",
   "defbu.getTemperature": "Meten van temperatuur met DS18B20: bereik -55°C - 125 °C or -67°F - 257°F",
-  "defbu.getTemperature|param|dataPin": "Datapin, eg: DigitalPin.P0",
+  "defbu.getTemperaturePin": "Meten van temperatuur met DS18B20: bereik -55°C - 125 °C or -67°F - 257°F",
+  "defbu.getTemperaturePin|param|dataPin": "Datapin, bv.: DigitalPin.P0",
+  "defbu.getTemperaturePin|param|unit": "meeteenheid, bv.: defbu.TemperatureUnit.C",
+  "defbu.getTemperature|param|unit": "meeteenheid, bv.: defbu.TemperatureUnit.C",
   "distance": "Afstandtests"
 }

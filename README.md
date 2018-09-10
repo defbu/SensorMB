@@ -3,7 +3,7 @@
 This library provides support for the different DEFBU Blocks, see https://www.defbu.nl
 
 ## Distance HC-SR04
-Reads distance in ``mm``, ``cm`` or ``inch`` or ``μs``.
+Reads distance in ``mm``, ``cm``, ``inch`` or ``μs``.
 
 ### Distance Units
 
@@ -18,8 +18,8 @@ Reads distance in ``mm``, ``cm`` or ``inch`` or ``μs``.
 ### Functions
 
 ```typescript
-getDistanc(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM)
-getDistancPins(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number
+getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM)
+getDistancePins(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number
 ```
 
 ### Example
@@ -27,6 +27,39 @@ getDistancPins(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPi
 ```typescript
 let distance = defbu.getDistance(defbu.DistanceUnit.CM)
 let distancepins = defbu.getDistancePins(defbu.DistanceUnit.CM, DigitalPin.P0, DigitalPin.P1)
+```
+
+## Distance DS18B20
+Reads distance in ``°C``, ``°dC``, ``°cC``, ``°F``, ``°dF``, ``°cF`` or ``raw``.
+
+### Temperature Units
+
+``TemperatureUnit.C`` is °C
+
+``TemperatureUnit.DC`` is °dC
+
+``TemperatureUnit.CC`` is °cC
+
+``TemperatureUnit.F`` is °F
+
+``TemperatureUnit.DF`` is °dF
+
+``TemperatureUnit.CF`` is °cF
+
+``TemperatureUnit.RAW`` is floating point in °C
+
+### Functions
+
+```typescript
+getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C)
+getTemperaturePin(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): number
+```
+
+### Example
+
+```typescript
+let temperature = defbu.getTemperature(defbu.TemperatureUnit.C)
+let temperaturePin = defbu.getTemperaturePin(defbu.TemperatureUnit.C, DigitalPin.P0)
 ```
 
 ## License

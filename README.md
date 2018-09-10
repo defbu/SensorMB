@@ -18,7 +18,7 @@ Reads distance in ``mm``, ``cm``, ``inch`` or ``μs``.
 ### Functions
 
 ```typescript
-getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM)
+getDistance(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM): number
 getDistancePins(unit: defbu.DistanceUnit = defbu.DistanceUnit.CM, trig: DigitalPin = DigitalPin.P0, echo: DigitalPin = DigitalPin.P1): number
 ```
 
@@ -51,7 +51,7 @@ Reads distance in ``°C``, ``°dC``, ``°cC``, ``°F``, ``°dF``, ``°cF`` or ``
 ### Functions
 
 ```typescript
-getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C)
+getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C): number
 getTemperaturePin(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): number
 ```
 

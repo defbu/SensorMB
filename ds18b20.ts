@@ -16,9 +16,7 @@ namespace defbu {
         //% block="°cF"
         CF = 5,
         //% block="raw °C"
-        RAWC = 6,
-        //% block="raw °F"
-        RAWF = 7
+        RAW = 6,
     }
 
     //% shim=defbu::Temperature
@@ -75,11 +73,8 @@ namespace defbu {
       else if (unit == TemperatureUnit.CF) {
           return Math.idiv(temp * 9, 5) + 3200
       } 
-      else if (unit == TemperatureUnit.RAWC) {
-        return temp / 100
-      }
       else {
-        return temp * 9 / 500 + 32
-      }
+        return temp / 100
+      }      
     }
 }

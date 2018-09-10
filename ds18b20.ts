@@ -15,8 +15,10 @@ namespace defbu {
         DF = 4,
         //% block="°cF"
         CF = 5,
-        //% block="raw"
-        RAW = 6
+        //% block="raw °C"
+        RAWC = 6,
+        //% block="raw °F"
+        RAWF = 7
     }
 
     //% shim=defbu::Temperature

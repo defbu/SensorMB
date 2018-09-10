@@ -30,7 +30,7 @@ let distancepins = defbu.getDistancePins(defbu.DistanceUnit.CM, DigitalPin.P0, D
 ```
 
 ## Distance DS18B20
-Reads distance in ``°C``, ``°dC``, ``°cC``, ``°F``, ``°dF``, ``°cF`` or ``raw °C``.
+Reads distance in ``°C``, ``°dC``, ``°cC``, ``°F``, ``°dF``, ``°cF``, ``raw °C`` or ``raw °F``.
 
 ### Temperature Units
 
@@ -46,7 +46,9 @@ Reads distance in ``°C``, ``°dC``, ``°cC``, ``°F``, ``°dF``, ``°cF`` or ``
 
 ``TemperatureUnit.CF`` is °cF
 
-``TemperatureUnit.RAW`` is floating point in °C
+``TemperatureUnit.RAWC`` is floating point in °C
+
+``TemperatureUnit.RAWF`` is floating point in °F
 
 ### Functions
 

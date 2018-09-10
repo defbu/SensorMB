@@ -79,7 +79,7 @@ namespace defbu {
         return temp / 100
       }
       else {
-        return temp * 9 / 100 + 32
+        return temp * 9 / 500 + 32
       }
     }
 }

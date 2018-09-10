@@ -17,7 +17,7 @@ namespace defbu {
         CF = 1
     }
 
-    //% shim=defbu::getTemperature
+    //% shim=defbu::Temperature
     export function Temperature(p: number): number {
         // Fake function for simulator
         return 0
@@ -35,9 +35,9 @@ namespace defbu {
     //% dataPin.fieldOptions.tooltips="false"
     //% group="Temperature"
     //% weight=45
-    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): string { 
-      /*          
+    export function getTemperature(unit: defbu.TemperatureUnit = defbu.TemperatureUnit.C, dataPin: DigitalPin = DigitalPin.P0): string {        
         let temp = Temperature(dataPin);
+        /*
         let x = (temp / 100)
         let y = (temp % 100)
         let z = ''
@@ -59,7 +59,7 @@ namespace defbu {
         }
         return z
       */
-     return "ja"
+      return "ja"
     }
 
 }
